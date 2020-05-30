@@ -1,21 +1,27 @@
-import java.util.*;
+package DSAndAlgo;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class ZombieInMatrix {
 
     private static int maxRow;
     private static int maxCol;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<List<Integer>> matrix = MyCollections.asList(MyCollections.asList(0, 1, 1, 0, 1), MyCollections.asList(0, 1, 0, 1, 0),
-                MyCollections.asList(0, 0, 0, 0, 1),MyCollections.asList(0, 1, 0, 0, 0));
+                MyCollections.asList(0, 0, 0, 0, 1), MyCollections.asList(0, 1, 0, 0, 0));
         maxRow = matrix.size();
         maxCol = matrix.get(0).size();
-        System.out.println("Time Required: "+zombieInMatrix(matrix,maxRow,maxCol));
+        System.out.println("Time Required: " + zombieInMatrix(matrix, maxRow, maxCol));
     }
+
     private static int zombieInMatrix(List<List<Integer>> matrix, int row, int col) {
 
         int count = 0;
-        int target = (row)*(col);
+        int target = (row) * (col);
         int resTime = 0;
 
         Queue<Position> queue = new LinkedList<>();

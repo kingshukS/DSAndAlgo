@@ -1,18 +1,23 @@
-import java.util.*;
+package DSAndAlgo;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MovieRatingProblem {
     private static Map<String, List<Double>> movieMap = new HashMap<>();
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
 
-        putRating("ABCD",null);
-        putRating("Don",4.1);
-        putRating("ABCD",1.1);
-        putRating("ABCD",3.1);
-        putRating("ABCD",2.2);
-        putRating("Don",4.3);
-        putRating("Don",4.5);
+        putRating("ABCD", null);
+        putRating("Don", 4.1);
+        putRating("ABCD", 1.1);
+        putRating("ABCD", 3.1);
+        putRating("ABCD", 2.2);
+        putRating("Don", 4.3);
+        putRating("Don", 4.5);
 
         System.out.println(getAverageRating("ABCD"));
 

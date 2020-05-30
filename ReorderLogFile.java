@@ -1,15 +1,18 @@
+package DSAndAlgo;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
 class ReorderLogFile {
 
-    public static void main(String[] args){
-        String[] logs = {"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
+    public static void main(String[] args) {
+        String[] logs = {"dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"};
         String[] output = reorderLogFiles(logs);
-        for(String str : output){
+        for (String str : output) {
             System.out.println(str);
         }
     }
+
     public static String[] reorderLogFiles(String[] logs) {
 
         int letterCount = 0;

@@ -1,7 +1,9 @@
+package DSAndAlgo;
+
 public class MinimumNumberOfJumpsN {
 
     public static void main(String[] args) {
-        int[] arr = {1,4,3,1,2,0,5,3};
+        int[] arr = {1, 4, 3, 1, 2, 0, 5, 3};
         int n = arr.length;
         System.out.print("Minimum Number Of Jumps Required:" + minimumNumberOfJumps(arr, n));
     }

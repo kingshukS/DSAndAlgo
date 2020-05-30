@@ -1,6 +1,8 @@
+package DSAndAlgo;
+
 public class MultipleOfThree {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MultipleOfThree m = new MultipleOfThree();
         System.out.println(isMultipleOfThree(23));
         System.out.println(isMultipleOfThree(24));

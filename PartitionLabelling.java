@@ -1,10 +1,12 @@
+package DSAndAlgo;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class PartitionLabelling {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String str = "ababcbacadefegdehijhklij";
-        System.out.print("List of Partitions: "+getPartitions(str));
+        System.out.print("List of Partitions: " + getPartitions(str));
     }
 
     private static List<Integer> getPartitions(String str) {

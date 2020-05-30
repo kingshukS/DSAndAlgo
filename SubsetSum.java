@@ -1,19 +1,24 @@
+package DSAndAlgo;
+
 /* A Naive recursive implementation of 0-1 Knapsack problem */
 class SubsetSum {
 
+    static boolean[][] t;
+
     // A utility function that returns maximum of two integers
-    static boolean compare(boolean a, boolean b) { return a||b; }
-    static boolean t[][];
+    static boolean compare(boolean a, boolean b) {
+        return a || b;
+    }
     // Returns the maximum value that can
     // be put in a knapsack of capacity W
 
-    static boolean subsetSum(int arr[], int sum, int n) {
-        t=new boolean[n+1][sum+1];
+    static boolean subsetSum(int[] arr, int sum, int n) {
+        t = new boolean[n + 1][sum + 1];
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= sum; j++) {
-                if (i == 0 )
+                if (i == 0)
                     t[i][j] = false;
-                if (j == 0 )
+                if (j == 0)
                     t[i][j] = true;
             }
         }
@@ -44,12 +49,11 @@ class SubsetSum {
     }
 
     // Driver program to test above function
-    public static void main(String args[])
-    {
-        int arr[] = new int[] { 10, 2, 30 };
-        int sum = 70;
+    public static void main(String[] args) {
+        int[] arr = new int[]{10, 2, 30};
+        int sum = 32;
         int n = arr.length;
-        System.out.println(subsetSum(arr,sum, n));
+        System.out.println(subsetSum(arr, sum, n));
     }
 }
 /*This code is contributed by Rajat Mishra */

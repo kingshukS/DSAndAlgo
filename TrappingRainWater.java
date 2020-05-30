@@ -1,10 +1,12 @@
+package DSAndAlgo;
+
 public class TrappingRainWater {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        int arr[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+        int[] arr = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int n = arr.length;
-        System.out.print("Quantity of water : "+calculateWaterTrapped(arr, n));
+        System.out.print("Quantity of water : " + calculateWaterTrapped(arr, n));
     }
 
     private static int calculateWaterTrapped(int[] arr, int n) {
@@ -14,15 +16,15 @@ public class TrappingRainWater {
         int water = 0;
         int temp = 0;
 
-        for(int i =0; i<n;i++){
+        for (int i = 0; i < n; i++) {
 
-            if(arr[i]>prev){
+            if (arr[i] > prev) {
                 prev_index = i;
                 prev = arr[i];
                 temp = 0;
-            }else{
-                water+= prev-arr[i];
-                temp+= prev-arr[i];
+            } else {
+                water += prev - arr[i];
+                temp += prev - arr[i];
             }
         }
 

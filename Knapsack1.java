@@ -1,14 +1,19 @@
+package DSAndAlgo;
+
 /* A Naive recursive implementation of 0-1 Knapsack problem */
 class Knapsack1 {
 
+    static int[][] t;
+
     // A utility function that returns maximum of two integers
-    static int max(int a, int b) { return (a > b) ? a : b; }
-    static int t[][];
+    static int max(int a, int b) {
+        return (a > b) ? a : b;
+    }
     // Returns the maximum value that can
     // be put in a knapsack of capacity W
 
-    static int knapSack(int W, int wt[], int val[], int n) {
-        t=new int[n+1][W+1];
+    static int knapSack(int W, int[] wt, int[] val, int n) {
+        t = new int[n + 1][W + 1];
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= W; j++) {
                 if (i == 0 || j == 0)
@@ -42,10 +47,9 @@ class Knapsack1 {
     }
 
     // Driver program to test above function
-    public static void main(String args[])
-    {
-        int val[] = new int[] { 60, 100, 160 };
-        int wt[] = new int[] { 10, 20, 30 };
+    public static void main(String[] args) {
+        int[] val = new int[]{60, 100, 160};
+        int[] wt = new int[]{10, 20, 30};
         int W = 50;
         int n = val.length;
         System.out.println(knapSack(W, wt, val, n));

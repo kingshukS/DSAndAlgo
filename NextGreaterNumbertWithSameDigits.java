@@ -1,9 +1,11 @@
+package DSAndAlgo;
+
 import java.util.Arrays;
 
 public class NextGreaterNumbertWithSameDigits {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int number = 534976;
-        System.out.print("Next greater number is : "+findNextGreaterNumber(number));
+        System.out.print("Next greater number is : " + findNextGreaterNumber(number));
     }
 
     private static int findNextGreaterNumber(int number) {
@@ -11,8 +13,7 @@ public class NextGreaterNumbertWithSameDigits {
         int n = chars.length;
         int i;
 
-        for (i = n - 1; i > 0; i--)
-        {
+        for (i = n - 1; i > 0; i--) {
             if (chars[i] > chars[i - 1]) {
                 break;
             }
@@ -24,9 +25,9 @@ public class NextGreaterNumbertWithSameDigits {
             int x = chars[i-1];
             int min = i;
 
-            for(int j = i+1; j < n;j++){
+            for (int j = i + 1; j < n; j++) {
 
-                if(chars[j]>x && chars[j]<=chars[min])
+                if (chars[j] > x && chars[j] <= chars[min])
                     min = j;
             }
 

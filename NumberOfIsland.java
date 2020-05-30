@@ -1,15 +1,18 @@
-class NumberOfIsland{
+package DSAndAlgo;
+
+class NumberOfIsland {
     private static int maxRow;
     private static int maxCol;
-    public static void main(String[] args){
-        int arr[][] = { { 1, 1, 0, 0, 0 },
-                { 0, 1, 0, 0, 1 },
-                { 1, 0, 0, 1, 1 },
-                { 0, 0, 0, 0, 0 },
-                { 1, 0, 1, 0, 1 } };
+
+    public static void main(String[] args) {
+        int[][] arr = {{1, 1, 0, 0, 0},
+                {0, 1, 0, 0, 1},
+                {1, 0, 0, 1, 1},
+                {0, 0, 0, 0, 0},
+                {1, 0, 1, 0, 1}};
         maxRow = arr.length;
         maxCol = arr[0].length;
-        System.out.print("Number of Islands are : "+ printNumberOfIslands(arr,maxRow,maxCol));
+        System.out.print("Number of Islands are : " + printNumberOfIslands(arr, maxRow, maxCol));
 
     }
 
@@ -30,14 +33,14 @@ class NumberOfIsland{
 
     private static void DFS(int[][] arr, int row, int col, boolean[][] visited) {
 
-        int[] rowNumber = {-1,-1,-1,0,0,1,1,1};
-        int[] colNumber = {-1,0,1,-1,1,-1,0,1};
+        int[] rowNumber = {-1, -1, -1, 0, 0, 1, 1, 1};
+        int[] colNumber = {-1, 0, 1, -1, 1, -1, 0, 1};
 
         visited[row][col] = true;
 
-        for(int k = 0; k<rowNumber.length;k++){
-            if(notVisitedYetAndSafe(arr, row+rowNumber[k], col+colNumber[k], visited)){
-                DFS(arr, row+rowNumber[k], col+colNumber[k], visited);
+        for (int k = 0; k < rowNumber.length; k++) {
+            if (notVisitedYetAndSafe(arr, row + rowNumber[k], col + colNumber[k], visited)) {
+                DFS(arr, row + rowNumber[k], col + colNumber[k], visited);
             }
         }
     }

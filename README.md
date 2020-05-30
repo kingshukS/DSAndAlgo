@@ -1,1 +1,1 @@
-# DSAndAlgo
+A Set of ds algo problem solutions for practice purpose
