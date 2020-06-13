@@ -7,7 +7,7 @@ public class LongestCommonSubsequence {
         String str1 = "abcd";
         String str2 = "afb8cxd";
 
-        System.out.println("Longest Common Subsequence : " + findLongestCommonSubsequence(str1, str2));
+        System.out.println("Longest Common Subsequence Length : " + findLongestCommonSubsequence(str1, str2));
 
     }
 
