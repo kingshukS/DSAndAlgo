@@ -1,7 +1,7 @@
 package DSAndAlgo;
 
 public class LongestCommonSubsequence {
-    private static int[][] t;
+    public static int[][] t;
 
     public static void main(String[] args) {
         String str1 = "abcd";
@@ -11,7 +11,7 @@ public class LongestCommonSubsequence {
 
     }
 
-    private static int findLongestCommonSubsequence(String str1, String str2) {
+    public static int findLongestCommonSubsequence(String str1, String str2) {
         int n1 = str1.length();
         int n2 = str2.length();
         t = new int[n1 + 1][n2 + 1];
