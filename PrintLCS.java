@@ -4,10 +4,10 @@ public class PrintLCS {
     private static int[][] t;
 
     public static void main(String[] args) {
-        String str1 = "abcdef";
+        String str1 = "abcdefxxg";
         String str2 = "afb8cxdexxfg";
 
-        System.out.println("Longest Common Subsequence Length : " + findLongestCommonSubsequence(str1, str2));
+        System.out.println("Longest Common Subsequence : " + findLongestCommonSubsequence(str1, str2));
     }
 
     private static String findLongestCommonSubsequence(String str1, String str2) {
@@ -21,11 +21,11 @@ public class PrintLCS {
         StringBuilder lcs = new StringBuilder();
 
         while (row != 0 && col != 0) {
-            if (str1.charAt(row - 1) == str2.charAt(col - 1)) {
+            if (t[row][col] == 1 + t[row - 1][col - 1]) {
                 lcs.append(str1.charAt(row - 1));
                 row--;
                 col--;
-            } else if (t[row - 1][col] > t[row][col - 1]) {
+            } else if (t[row][col] == t[row - 1][col]) {
                 row--;
             } else {
                 col--;
@@ -59,6 +59,6 @@ public class PrintLCS {
                 }
             }
         }
-        System.out.println(t[n1][n2]);
+//        System.out.println(t[n1][n2]);
     }
 }
