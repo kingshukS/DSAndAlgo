@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MovieRatingProblem {
-    private static Map<String, List<Double>> movieMap = new HashMap<>();
+    private static final Map<String, List<Double>> movieMap = new HashMap<>();
 
     public static void main(String[] args) {
 
